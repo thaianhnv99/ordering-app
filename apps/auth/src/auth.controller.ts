@@ -33,8 +33,6 @@ export class AuthController {
   @UseGuards(JwtAuthGuard) // Khi xác thực xong sẽ return user
   @MessagePattern('validate_user')
   async validateUser(@CurrentUser() user: UsersDocument, @Payload() auth: any) {
-    console.log('auth', auth);
-
     return user;
   }
 }

@@ -8,7 +8,7 @@ interface RmqModuleOptions {
 }
 @Module({
   providers: [RmqService],
-  exports: [RmqModule],
+  exports: [RmqService],
 })
 export class RmqModule {
   static register({ name }: RmqModuleOptions): DynamicModule {
