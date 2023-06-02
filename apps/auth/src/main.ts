@@ -10,6 +10,11 @@ async function bootstrap() {
   const configService = app.get(ConfigService);
   const rmqService = app.get(RmqService);
 
+  app.enableCors({
+    origin: ['http://localhost:3200'],
+    credentials: true,
+  });
+
   app.use(cookieParser());
   app.useGlobalPipes(new ValidationPipe({ whitelist: true }));
   app.connectMicroservice(rmqService.getOptions(AUTH_SERVICE, true));
