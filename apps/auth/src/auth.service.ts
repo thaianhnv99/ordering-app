@@ -29,7 +29,7 @@ export class AuthService {
       expires,
     });
 
-    return { access_token: token };
+    return token;
   }
 
   async logout(response: Response) {

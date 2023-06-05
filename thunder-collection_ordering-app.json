@@ -1,0 +1,144 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "ordering-app",
+    "dateExported": "2023-06-05T02:32:46.708Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "a0a0d40f-0a97-4d67-be43-e60385a50311",
+            "name": "orders",
+            "containerId": "",
+            "created": "2023-05-29T07:48:11.731Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "5fcc1712-601a-424a-ac35-a34f6834e01d",
+            "name": "auth",
+            "containerId": "",
+            "created": "2023-05-30T02:59:33.513Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "8d81f530-cf5c-4fa6-b06a-5bc9bd030cc7",
+            "name": "users",
+            "containerId": "",
+            "created": "2023-05-30T02:59:52.512Z",
+            "sortNum": 30000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "cf512a4c-d532-428f-998e-fc9b9cf90a6b",
+            "colId": "314147ed-8004-46b2-9b2f-669045b3b8af",
+            "containerId": "a0a0d40f-0a97-4d67-be43-e60385a50311",
+            "name": "get-orders",
+            "url": "localhost:3000/orders",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-05-29T07:48:22.552Z",
+            "modified": "2023-05-29T08:28:10.558Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "68396b13-1654-44ea-84d8-85d39fde17c5",
+            "colId": "314147ed-8004-46b2-9b2f-669045b3b8af",
+            "containerId": "a0a0d40f-0a97-4d67-be43-e60385a50311",
+            "name": "create-order",
+            "url": "localhost:3000/orders",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-05-29T08:19:59.539Z",
+            "modified": "2023-05-31T08:59:56.493Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"T-Shirt-v2\",\n  \"price\": 1,\n  \"phoneNumber\": \"+84345234567\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "91b2c75c-d479-45b4-bb3d-2d78e592ebe7",
+            "colId": "314147ed-8004-46b2-9b2f-669045b3b8af",
+            "containerId": "8d81f530-cf5c-4fa6-b06a-5bc9bd030cc7",
+            "name": "create",
+            "url": "localhost:3001/users",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2023-05-30T02:59:58.623Z",
+            "modified": "2023-05-30T07:37:08.767Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"thai@gmail.com\",\n  \"password\": \"Password@1123\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "29f98fe6-4bbe-4deb-bbdd-8c357e6b1897",
+            "colId": "314147ed-8004-46b2-9b2f-669045b3b8af",
+            "containerId": "8d81f530-cf5c-4fa6-b06a-5bc9bd030cc7",
+            "name": "get-all",
+            "url": "localhost:3001/users",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2023-05-30T03:40:38.424Z",
+            "modified": "2023-05-30T03:40:44.458Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "94bcfd1d-1a2a-4fad-8818-b339bd4d3a59",
+            "colId": "314147ed-8004-46b2-9b2f-669045b3b8af",
+            "containerId": "5fcc1712-601a-424a-ac35-a34f6834e01d",
+            "name": "login",
+            "url": "localhost:3001/auth/login",
+            "method": "POST",
+            "sortNum": 60000,
+            "created": "2023-05-30T07:35:12.773Z",
+            "modified": "2023-05-30T07:43:13.859Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"thai@gmail.com\",\n  \"password\": \"Password@1123\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "a7f4eb76-da4b-4552-8707-bd69dd85a2f1",
+            "colId": "314147ed-8004-46b2-9b2f-669045b3b8af",
+            "containerId": "5fcc1712-601a-424a-ac35-a34f6834e01d",
+            "name": "get-me",
+            "url": "localhost:3001/auth/me",
+            "method": "GET",
+            "sortNum": 70000,
+            "created": "2023-05-30T08:41:53.418Z",
+            "modified": "2023-05-30T08:42:12.760Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "34bf6265-2a0f-4d83-a39c-4ccb24798c05",
+            "colId": "314147ed-8004-46b2-9b2f-669045b3b8af",
+            "containerId": "5fcc1712-601a-424a-ac35-a34f6834e01d",
+            "name": "logout",
+            "url": "localhost:3001/auth/logout",
+            "method": "GET",
+            "sortNum": 80000,
+            "created": "2023-05-30T11:28:17.411Z",
+            "modified": "2023-05-30T11:34:56.617Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
