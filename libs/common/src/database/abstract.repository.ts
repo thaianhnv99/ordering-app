@@ -24,7 +24,6 @@ export abstract class AbstractRepository<TDocument extends AbstractDocument> {
       ...document,
       _id: new Types.ObjectId(),
     });
-
     return (await createDocument.save()).toJSON() as unknown as TDocument;
   }
 

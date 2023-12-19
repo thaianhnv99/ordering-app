@@ -20,7 +20,7 @@ services:
       - .:/usr/src/app
       - /usr/src/app/node_modules
     ports:
-      - '3000:3000'
+      - '3002:3002'
 
   billing:
     build:

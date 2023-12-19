@@ -5,6 +5,7 @@ import { OrdersRepository } from './orders.repository';
 import { BILLING_SERVICE } from '@app/common';
 import { ClientProxy } from '@nestjs/microservices';
 import { lastValueFrom } from 'rxjs';
+import { FilterQuery } from 'mongoose';
 
 @Injectable()
 export class OrdersService {
@@ -35,7 +36,15 @@ export class OrdersService {
     }
   }
 
-  async getOrders(): Promise<OrderDocument[]> {
-    return this.orderRepository.find({});
+  async getOrders(
+    filter?: FilterQuery<OrderDocument>,
+  ): Promise<OrderDocument[]> {
+    return this.orderRepository.find(filter);
+  }
+
+  async findOne(name: string): Promise<OrderDocument> {
+    return await this.orderRepository.findOne({
+      name,
+    });
   }
 }
